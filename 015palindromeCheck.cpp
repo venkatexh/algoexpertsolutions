@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//iteratively using utility function
+// iteratively using utility function
 
 bool check_palindrome(string str, int i, int j) {
 	if(str[i] != str[j])
@@ -33,12 +33,21 @@ bool check_palindrome_rec(string str, int i, int j) {
 	return check_palindrome_rec(str, i+1, j-1);
 }
 
+// reversing and pushing into array
+
+bool check_palindrome_rev(string str, int i, int j) {
+	string res;
+	while(i <= j) {
+		res.push_back(str[j--]);
+	}
+	return (res == str);
+}
 
 int main() {
 	string str;
 	cout << "Enter string: ";
 	getline(cin, str);
-	if(check_palindrome_rec(str, 0, str.length() - 1))
+	if(check_palindrome_rev(str, 0, str.length() - 1))
 		cout << "Palindrome!" << endl;
 	else
 		cout << "Not palindrome!" << endl;
