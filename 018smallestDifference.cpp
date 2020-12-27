@@ -37,10 +37,10 @@ int main() {
 	int n2;
 	cin >> n2;
 	int A[n1], B[n2];
-	cout << "Enter first array:" << endl;
+	cout << "Enter first array: " << endl;
 	for(int i = 0; i < n1; i++)
 		cin >> A[i];
-	cout << "Enter second array:" << endl;
+	cout << "Enter second array: " << endl;
 	for(int i = 0; i < n2; i++)
 		cin >> B[i];
 	sort(A, A + n1);
