@@ -4,7 +4,7 @@ using namespace std;
 
 void spiral_traverse(int arr[4][4], int p, int q) {
 	int startRow = 0, endRow = p - 1;
-	int startCol = 0, endCol = q-1;
+	int startCol = 0, endCol = q - 1;
 	while(startRow <= endRow && startCol <= endCol) {
 		int i = 0;
 		for(i = startCol; i < endCol; i++)
